@@ -7,6 +7,13 @@ from app.calculator.operations import add, subtract, multiply, divide
 # with different sets of arguments. Here, it's used to test various scenarios of arithmetic operations
 # with both integer and decimal operands to ensure the operations work correctly under different conditions.
 
+@pytest.mark.parametrize("a, b, operation, expected", [
+    (Decimal('2'), Decimal('3'), add, Decimal('5')),
+    (Decimal('10'), Decimal('4'), subtract, Decimal('6')),
+    
+])
+
+
 def test_calculation_operations(a, b, operation, expected):
     """
     Test calculation operations with various scenarios.

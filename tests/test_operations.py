@@ -3,6 +3,11 @@ from decimal import Decimal
 from app.calculator.calculation import Calculation
 from app.calculator.operations import add, subtract, multiply, divide
 
+@pytest.mark.parametrize("a, b, operation, expected", [
+    (Decimal('2'), Decimal('3'), add, Decimal('5')),
+    (Decimal('10'), Decimal('4'), subtract, Decimal('6')),
+    
+])
 
 def test_operation(a, b, operation, expected):
     '''Testing various operations'''
