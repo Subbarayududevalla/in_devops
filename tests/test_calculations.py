@@ -11,7 +11,7 @@ from app.calculator.calculation import Calculation
 from app.calculator.calculations import Calculations
 
 # Import arithmetic operation functions (add and subtract) to be tested.
-from calculator.operations import add, subtract
+from app.calculator.operations import add, subtract
 
 # pytest.fixture is a decorator that marks a function as a fixture,
 # a setup mechanism used by pytest to initialize a test environment.
